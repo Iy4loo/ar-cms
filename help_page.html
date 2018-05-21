@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<ins><h1>Help:</h1></ins>
+<br>
+ <strong>General:</strong>
+For each marker you can choose a content-object. There are overall 4 types of contents: 3D-Objects, Music, Pictures and Videos. You have to fill out the form and select all files(if required).
+<p>
+If you want to show the contents in the map-mode(= if you want to show your AR-contents on some maps), then select the map-mode option. If you don't want to use it in the map-mode, then just ignore this option.
+</p>
+<p>
+If you don't want to attach some contents to some marker - then choose "Nothing" as type for the object.
+</p>
+<p>
+If you don't want to change the already uploaded contents for the marker, then choose "Don't change" as type for the objects. (But first make sure that you already uploaded something for this marker (You can do it on the overview-page))
+</p>
+<p>
+If you add a new marker on the CMS, you will need to upload it to Vuforia so that it can be recognized. Without this being done, the content won't be augmented over the marker.
+</p>
+<p>
+Warning: if you try to upload some file and there is already some uploaded file which have the same name, then this already uploaded file will be replaced by the new file.
+</p>
+
+
+<strong>Supported file-formats:</strong><br>
+3D-Objects: .obj<br>
+Music: .ogg<br>
+Pictures: .jpg and .png<br>
+Videos: .mp4<br>
+
+<br>
+ <strong>Other important things:</strong><br>
+-The song-title in the XML-file must have "_"-chars instead of " "-chars.<br>
+-Tags in the XML-files are not case-sensetive.<br>
+-URL's in the XML-file are case-sensitive.<br>
+-For each file, the php-script generates a hash-value while uploading. We need this hash-values on the client side - while updating, the client-app will check(using the hash-values) whether the content-file, which was already downloaded, need to be updated.<br>
+-In the XML-file, the URL's should contain the content-extension.(e.g. for 3D-object: www.mdad.de/3d_file.obj  -> the client-app will know that this is a obj-file)<br>
+-Only 10 objects can be tracked by the client-app at the same time. <br>
+<br>
+
+
+
+
+
+</html>

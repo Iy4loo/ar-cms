@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>XAMPP FAQs for Mac OS X</title>
+
+    <meta name="description" content="Instructions on how to install XAMPP for OSX distributions." />
+    
+
+    <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/dashboard/stylesheets/all-rtl.css" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/dashboard/javascripts/modernizr.js" type="text/javascript"></script>
+
+
+    <link href="/dashboard/images/favicon.png" rel="icon" type="image/png" />
+
+
+  </head>
+
+  <body class="ur ur_faq">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/dashboard/ur/index.html">Apache Friends</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#">
+              <span>Menu</span>
+            </a>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li class=""><a href="/applications.html">Applications</a></li>
+              <li class="active"><a href="/dashboard/ur/faq.html">اکثر پوچھے گئے سوالات</a></li>
+              <li class=""><a href="/dashboard/ur/howto.html">HOW-TO Guides</a></li>
+              <li class=""><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class=""><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <div id="wrapper">
+      <div class="hero">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>OS X <span>عمومی سوالات</span></h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="large-8 columns">
+    <dl class="accordion">
+      <dt>میں Mac OS X کے لئے XAMPP کی انسٹال کس طرح کروں؟</dt>
+      <dd>
+      <p>XAMPP کی انسٹال کرنے کے لئے صرف مندرجہ ذیل ہے:</p>
+      <ul>
+        <li>Download the disk image (DMG image) from the Apache Friends website.</li>
+        <li>Double-click the image file and drag the XAMPP icon to the Applications folder.</li>
+        <li>Launch XAMPP by double-clicking the XAMPP icon in the Applications folder.</li>
+        <li>Enter your system's administrator credentials when prompted.</li>
+        <img src="/dashboard/images/screenshots/xampp-macosx-launch-credentials.jpg" />
+        </ul>
+        <p>You should see the XAMPP stack manager, as shown below:</p>
+        <img src="/dashboard/images/screenshots/xampp-macosx-stack-manager.jpg" />
+      </dd>
+      
+      <dt>Does XAMPP include MySQL or MariaDB?</dt>
+      <dd>
+        <p>Since XAMPP 5.5.30 and 5.6.14, XAMPP ships MariaDB instead of MySQL. The commands and tools are the same for both.</p>
+      </dd>
+      
+      <dt>میں کس طرح XAMPP کو سٹارٹ کروں ؟</dt>
+      <dd>
+      <p>To start XAMPP:</p>
+      <ul>
+        <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+        <li>Click the "Start" button in the "General" tab of the stack manager.
+        <img src="/dashboard/images/screenshots/xampp-macosx-stack-manager-general.jpg" />
+        </li>
+        <li>Once the status icon turns green, navigate to the "Services" tab and start Apache, MySQL and any other available services.
+        <img src="/dashboard/images/screenshots/xampp-macosx-stack-manager-services.jpg" />
+        </li>
+        <li>Navigate to the "Network" tab and enable port forwarding (port 80 of the stack to port 8080 of the host system) over SSH.
+        <img src="/dashboard/images/screenshots/xampp-macosx-stack-manager-network.jpg" />
+        </li>
+      </ul>
+      </dd>
+      
+      <dt>میں کس طرح XAMPP کو روک سکتا ہوں؟</dt>
+      <dd>
+      <p>To stop XAMPP, click the "Stop" button in the "General" tab of the stack manager. Once the status icon turns red, close the stack manager window.</p>      
+      </dd>
+      
+      <dt>میں کس طرح جانچ سکتا ہوں کہ سب چیزوں نے کام کیا ؟</dt>
+      <dd>
+      <p>Verify that you have enabled port forwarding (from port 80 of the stack to port 8080 of the host system) in the "Network" tab of the stack manager and type the following URL in a web browser:</p>
+      <p><code>http://localhost:8080</code></p>
+      <p>You should see the XAMPP start page, as shown below.</p>
+        <img src="/dashboard/images/screenshots/xampp-macosx-start.jpg" />    
+      </dd>
+      
+      <dt>کیا XAMPP کی پیداوار تیار ہے؟</dt>
+      <dd>
+      <p>XAMPP صرف ترقی کے ماحول کے لئے ہی نہیں ترتیب دیا گیا ہے، لیکن . XAMPP کو جس طرح وہ  چاہتا / چاہتی ہے ڈویلپر کچھ بھی اجازت دینے کے لئے ہر ممکن حد تک کھلا ہے. ترقی کے ماحول کے لئے یہ بہت اچھا ہے لیکن پیداوار کے ماحول میں یہ مہلک ہو سکتا ہے.</p>
+      <p>یہاں XAMPP کی لاپتہ سلامتی کی فہرست:</p>
+      <ol>
+        <li>مائی ایس کیو ایل کے منتظم (جڑ)/ (root) کا کوئی پاسوڑد نہیں ہے.</li>
+        <li>مائی ایس کیو ایل ڈیمان نیٹ ورک کے ذریعے قابل رسائی ہے.</li>
+        <li>ProFTPD uses the password "lampp" for user "daemon".</li>
+      </ol>
+      To fix most of the security weaknesses:
+      <ul>
+        <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+        <li>Ensure that all services are running in the "Services" tab of the stack manager (or start them as needed).</li>
+        <li>Open a new terminal from the "General" tab of the stack manager and run the following command in it:
+          <p><code>/opt/lampp/lampp security</code></p>
+        </li>
+      </ul>      
+      یہ XAMPP کی تنصیب محفوظ بنانے کے لئے سیکورٹی چیک.
+      </dd>
+
+      <dt>Apache doesn't seem to start. What can I do?</dt>
+      <dd>
+        <p>یہ خرابی ایک سے زیادہ وجوہات کی بنا پر موجود ہو سکتی ہے. اپاچی کئی حالات کے تحت یہ غلطی دکھاتا ہے. عین مطابق وجہ تلاش کرنے کے لیے ہمیں کچھ تحقیق کرنی ہے:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Open a new terminal from the "General" tab of the stack manager and run the following command in it:
+            <p><code>tail -2 /opt/lampp/logs/error_log</code></p>
+          </li>
+        </ul>        
+        <p>اگر آپکو کوئی خرابی کا پیغام ملتا ہے تو مدد کے لیے {community}% کا دورہ کریں.</p>
+      </dd>
+
+      <dt>میں کس طرح اپنے XAMPP کی انسٹالیشن زیادہ محفوظ بنا سکتا ہوں ؟</dt>
+      <dd>
+        <p>پہلے سے طے شدہ انسٹالیشن میں، XAMPP کا کوئی پاس ورڈ نہیں لگا ہوتا. XAMPP اس ترتیب سے دوسروں کے لیے قابل رسائی ہوتا ہے اس لی اسے ایسے چلانے کی سفارش نہیں کی جاتی ہے .To make the installation more secure:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Ensure that all services are running in the "Services" tab of the stack manager (or start them as needed).</li>
+          <li>Open a new terminal from the "General" tab of the stack manager and run the following command in it:            
+            <p><code>tail -2 /opt/lampp/logs/error_log</code></p>
+          </li>
+          <li>You should see the following dialog on your screen. Enter responses to each prompt.
+           <p><code>
+XAMPP: Quick security check...</br>
+XAMPP: MySQL is accessable via network.</br>
+XAMPP: Normaly that's not recommended. Do you want me to turn it off? [yes] yes</br>
+XAMPP: Turned off.</br>
+XAMPP: Stopping MySQL...</br>
+XAMPP: Starting MySQL...</br>
+XAMPP: The MySQL/phpMyAdmin user pma has no password set!!!</br>
+XAMPP: Do you want to set a password? [yes] yes</br>
+XAMPP: Password: ******</br>
+XAMPP: Password (again): ******</br>
+XAMPP: Setting new MySQL pma password.</br>
+XAMPP: Setting phpMyAdmin's pma password to the new one.</br>
+XAMPP: MySQL has no root passwort set!!!</br>
+XAMPP: Do you want to set a password? [yes] yes</br>
+XAMPP: Write the passworde somewhere down to make sure you won't forget it!!!</br>
+XAMPP: Password: ******</br>
+XAMPP: Password (again): ******</br>
+XAMPP: Setting new MySQL root password.</br>
+XAMPP: Setting phpMyAdmin's root password to the new one.</br>
+XAMPP: The FTP password for user 'nobody' is still set to 'lampp'.</br>
+XAMPP: Do you want to change the password? [yes] yes</br>
+XAMPP: Password: ******</br>
+XAMPP: Password (again): ******</br>
+XAMPP: Reload ProFTPD...</br>
+XAMPP: Done.</br>
+          </code></p></li>
+        </ul>
+        <p>اس حکم کو بلا نے کے بعد آپ کے XAMPP کی انسٹالیشن اور بھی زیادہ محفوظ ہونی چاہئے .</p>
+      </dd>
+
+      <dt>میں کس طرح eAccelerator چالو کروں ؟</dt>
+      <dd>
+        <p>To activate eAccelerator for PHP:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and click the "Explore" button to open the file manager.</li>
+          <li>Find the following lines in your /opt/lampp/etc/php.ini file:
+            <p><code>;extension="eaccelerator.so"</br>
+              ;eaccelerator.shm_size="16"</br>
+              ;eaccelerator.cache_dir="/opt/lampp/tmp/eaccelerator"</br>
+              ;eaccelerator.enable="1"</br>
+              ;eaccelerator.optimizer="1"</br>
+              ;eaccelerator.check_mtime="1"</br>
+              ;eaccelerator.debug="0"</br>
+              ;eaccelerator.filter=""</br>
+              ;eaccelerator.shm_max="0"</br>
+              ;eaccelerator.shm_ttl="0"</br>
+              ;eaccelerator.shm_prune_period="0"</br>
+              ;eaccelerator.shm_only="0"</br>
+              ;eaccelerator.compress="1"</br>
+              ;eaccelerator.compress_level="9"</code></p>
+          </li>  
+          <li>Remove the semicolon at the beginning of each line and restart XAMPP.</li>          
+        </ul>
+        <p>اب توسیع فعال ہونی چاہئے .For more information about eAccelerator, check the eAccelerator home page: <a href="http://eaccelerator.net">http://eaccelerator.net</a>.</p>
+      </dd>
+      
+      <dt>میں کس طرح PHP کے لئے OCI8/Oracle توسیع کو چالو کروں ؟</dt>
+      <dd>
+        <p>To activate the OCI8/Oracle extension for PHP:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Ensure that all services are running in the "Services" tab of the stack manager (or start them as needed).</li>
+          <li>Open a new terminal from the "General" tab of the stack manager and run the following command in it:            
+            <p><code>/opt/lampp/lampp oci8</code></p>
+          </li>
+          <li>You should see the following dialog on your screen. Enter the path to the Oracle client libraries when prompted.
+          <p><code>
+Please enter the path to your Oracle or Instant Client installation:</br>
+installing symlinks...</br>
+patching php.ini...</br>
+OCI8 add-on activation likely successful.</br>
+LAMPP: Stopping Apache with SSL...</br>
+LAMPP: Starting Apache with SSL...</code></p>
+          </li>        
+        </ul>
+        <p>اب توسیع فعال ہونی چاہئے .</p>
+      </dd>
+
+      <dt>How do I copy files to the Apache server document root?</dt>
+      <dd>
+        <p>To copy files from the host system to the XAMPP Apache server document root, follow these steps:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and click the "Explore" button to open the file manager.</li>
+          <img src="/dashboard/images/screenshots/xampp-macosx-stack-manager-volumes.jpg" />
+          <li>Navigate to the /opt/lampp/htdocs directory in the file manager. This directory is the XAMPP Apache server document root. Copy files to it from the host system using the file manager in the usual way.</li>
+      </dd>
+   
+      <dt>How do I enable access to phpMyAdmin from the outside?</dt>
+      <dd>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
+      <p>IMPORTANT: Enabling external access for phpMyAdmin in production environments is a significant security risk. You are strongly advised to only allow access from localhost. A remote attacker could take advantage of any existing vulnerability for executing code or for modifying your data.</p>
+      To enable remote access to phpMyAdmin, follow these steps:
+      <ul>
+        <li>Edit the /opt/lampp/etc/extra/httpd-xampp.conf file.</li>
+        <li>Within this file, find the lines below. 
+          <p><code>
+              Alias /phpmyadmin "/opt/lampp/phpmyadmin/"
+              &lt;Directory "/opt/lampp/phpmyadmin"&gt;
+                AllowOverride AuthConfig
+                Require local
+          </code></p>
+        </li>
+        <li>Then replace 'Require local' with 'Require all granted'.</li>
+          <p><code>
+              Alias /phpmyadmin "/opt/lampp/phpmyadmin/"
+              &lt;Directory "/opt/lampp/phpMyAdmin"&gt;
+                AllowOverride AuthConfig
+                Require all granted
+          </code></p>
+        <li>Save the file and restart the Apache service using the stack manager.</li>
+      </ul>
+      </dd>      
+      
+      <dt>میں کس طرح بیک اپ/دوبارہ XAMPP نظام بحال کروں؟</dt>
+      <dd>
+        <p><strong>تنبیہ:</strong> بیک اپ اور فعالیت کو بحال ترقی کے تحت اب بھی ہے اور درست طریقے سے کام نہیں کر سکتے .</p>
+        <p>You can create the backup as follows:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Ensure that all services are running in the "Services" tab of the stack manager (or start them as needed).</li>
+          <li>Open a new terminal from the "General" tab of the stack manager and run the following command in it:            
+            <p><code>/opt/lampp/lampp backup</code></p>
+          یا
+            <p><code>/opt/lampp/lampp backup secret</code></p>
+          آپ "خفیہ" ایس کیو ایل کی جڑ پاس کہاں ہے. یہ کمانڈ مندرجہ ذیل پیداوار پیدا کر دے گا:
+            <p><code>Backing up databases...</br>
+Backing up configuration, log and htdocs files...</br>
+Calculating checksums...</br>
+Building final backup file...</br>
+Backup finished.</br>
+Take care of /Applications/XAMPP/xamppfiles/backup/xampp-backup-22-01-14.sh</code></p>
+          فائل / Applications/XAMPP/xamppfiles/backup/xampp-backup-22-01-14.sh (مندرجہ بالا مثال میں) اپنے backuped کے اعداد و شمار پر مشتمل ہے. ایک کو بچانے کی جگہ پر اس فائل کو حاصل.</li>
+          <li>Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and click the "Explore" button to open the file manager.</li>
+          <li>Move the backup file to a safe place on the host system.</li>
+        </ul>
+
+        <p>To restore the backup on a new system, you need the same version of XAMPP as on your original/source system. Follow these steps to restore the backup:</p>
+        <ul>
+          <li>Launch the stack manager by double-clicking the XAMPP icon in the mounted disk image.</li>
+          <li>Ensure that all services are running in the "Services" tab of the stack manager (or start them as needed).</li>
+          <li>Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and click the "Explore" button to open the file manager.</li>
+          <li>Copy the backup file from the host system to the mounted directory.</li>
+          <li>Open a new terminal from the "General" tab of the stack manager, change to the directory containing the backup file and run the following command (change the file name in the command to reflect the actual backup file name):
+            <p><code>./xampp-backup-22-01-14.sh</code> </p>
+          آپ کچھ اس طرح نظر آنا چاہئے:
+  <p><code>Checking integrity of files...
+Restoring configuration, log and htdocs files...
+Checking versions...
+Installed: XAMPP 1.4.2
+Backup from: XAMPP 1.4.2
+Restoring MySQL databases...
+Restoring MySQL user databases...
+Backup complete. Have fun!
+You may need to restart XAMPP to complete the restore</code></p></li>
+        </ul>
+      </dd>
+
+    </dl>
+
+  </div>
+</div>
+
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-8 columns">
+              <ul class="social">
+  <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
+  <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+  <li class="google"><a href="https://plus.google.com/+xampp/posts">Add us to your G+ Circles</a></li>
+</ul>
+
+              <ul class="inline-list">
+                <li><a href="https://www.apachefriends.org/blog.html">بلاگ</a></li>
+                <li><a href="https://www.apachefriends.org/privacy_policy.html">رازداری کی پالیسی</a></li>
+                <li>
+<a target="_blank" href="http://www.fastly.com/">                    CDN کی طرف سے فراہم
+                    <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>                </li>
+              </ul>
+            </div>
+            <div class="large-4 columns">
+              <p class="text-right">کاپی رائٹ 2017, Apache دوست</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/dashboard/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>
