@@ -58,7 +58,7 @@ if(isset($errorMessage)) {
 Login:<br>
 <input type="login" size="40" maxlength="250" name="email"><br><br>
  
-Passwort:<br>
+Password:<br>
 <input type="password" size="40"  maxlength="250" name="passwort"><br>
  
 <input type="submit" value="Login">

@@ -17,7 +17,7 @@ die;
 
 
 <body style="background-color:#C63B0A;">
-<body background="auob.png"/>
+<!--<body background="auob.png"/>!-->
 <label>Content Managment System </label>
   <br>
   Auob Country Lodge AR App
@@ -27,7 +27,6 @@ die;
 
 </body>
 </html>
-
 
 <?php
 session_start();
@@ -40,11 +39,6 @@ if(!isset($_SESSION['user']) || !isset($_SESSION['psw'])): ?>
   <a href="customercontent.php" target="content">Add Customer Media</a>
   <a href="?logout=1">Logout</a>
 <?php endif; ?>
-
-
-
-
-
 
 
 <style type="text/css">
